@@ -1,0 +1,14 @@
+{
+    "name": "Terraform CI Workflow",
+    "description": "YouGitMoreWithLes@Insight CI workflow template.",
+    "iconName": "Terraform",
+    "categories": [
+        "Terraform",
+        "Continuous integration"
+    ],
+    "filePatterns": [
+        ".*\\.yml$",
+        ".*\\.yaml$",
+        ".*\\.md$"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Terraform CD Workflow",
+    "description": "YouGitMoreWithLes@Insight CD workflow template.",
+    "iconName": "Terraform",
+    "categories": [
+        "Terraform",
+        "Deployment"
+    ],
+    "filePatterns": [
+        ".*\\.yml$",
+        ".*\\.yaml$",
+        ".*\\.md$"
+    ]
+}
