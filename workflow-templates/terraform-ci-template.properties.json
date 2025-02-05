@@ -1,9 +1,10 @@
 {
-    "name": "Terraform CD Workflow",
-    "description": "YouGitMoreWithLes@Insight CD workflow template.",
+    "name": "Terraform CI Workflow",
+    "description": "YouGitMoreWithLes@Insight CI workflow template.",
     "iconName": "Terraform",
     "categories": [
-        "Terraform"
+        "Terraform",
+        "Continuous integration"
     ],
     "filePatterns": [
         ".*\\.yml$",

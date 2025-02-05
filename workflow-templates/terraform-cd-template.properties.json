@@ -3,7 +3,8 @@
     "description": "YouGitMoreWithLes@Insight CD workflow template.",
     "iconName": "Terraform",
     "categories": [
-        "Terraform"
+        "Terraform",
+        "Deployment"
     ],
     "filePatterns": [
         ".*\\.yml$",
