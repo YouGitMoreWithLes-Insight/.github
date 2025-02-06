@@ -28,4 +28,4 @@ jobs:
           FIX_JAVASCRIPT_PRETTIER: true
           FIX_YAML_PRETTIER: true
           FIX_TERRAFORM_FMT: true
-          TERRAFORM_TERRASCAN_CONFIG_FILE: .github/configuration/terrascan.yml
+          TERRAFORM_TERRASCAN_CONFIG_FILE: "$GITHUB_WORKSPACE/.github/configuration/terrascan.yml"
