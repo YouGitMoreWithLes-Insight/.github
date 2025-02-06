@@ -23,6 +23,10 @@ jobs:
           client-secret: ${{ secrets.ARM_CLIENT_SECRET }}
           subscription-id: ${{ secrets.ARM_SUBSCRIPTION_ID }}          
           tenant-id: ${{ secrets.ARM_TENANT_ID }}
+          allow-no-subscriptions: true
+          enable-AzPSSession: true
+          enable-AzCli: true
+          environment: 'AzureCloud'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
