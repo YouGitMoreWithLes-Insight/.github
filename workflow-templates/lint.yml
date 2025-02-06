@@ -1,0 +1,30 @@
+name: linter
+on:
+  workflow_call:
+    inputs:
+      branch:
+        required: true
+        type: string
+
+permissions: read-all
+
+jobs:
+  lint:
+    name: Lint all repository code
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run super-linter
+        uses: github/super-linter@v7
+        env:
+          DEFAULT_BRANCH: ${{ inputs.branch }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISABLE: JSCPD CHECKOV
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_JSCPD: false
+          FIX_JAVASCRIPT_PRETTIER: true
+          FIX_YAML_PRETTIER: true
