@@ -21,9 +21,8 @@ jobs:
         env:
           DEFAULT_BRANCH: ${{ inputs.branch }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # DISABLE: JSCPD CHECKOV
-          VALIDATE_ALL_CODEBASE: false
-          VALIDATE_JSCPD: false
-          VALIDATE_CHECKOV: false
+          DISABLE: JSCPD CHECKOV
+          VALIDATE_ALL_CODEBASE: true
           FIX_JAVASCRIPT_PRETTIER: true
           FIX_YAML_PRETTIER: true
+          FIX_TERRAFORM_FMT: true
