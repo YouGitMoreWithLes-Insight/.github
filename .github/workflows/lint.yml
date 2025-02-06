@@ -23,6 +23,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISABLE: JSCPD CHECKOV
           VALIDATE_ALL_CODEBASE: true
+          VALIDATE_CHECKOV: false
+          VALIDATE_JSCPD: false
           FIX_JAVASCRIPT_PRETTIER: true
           FIX_YAML_PRETTIER: true
           FIX_TERRAFORM_FMT: true
+          TERRAFORM_TERRASCAN_CONFIG_FILE: .github/configuration/terrascan.yml
