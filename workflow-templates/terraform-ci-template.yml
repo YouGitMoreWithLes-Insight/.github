@@ -7,10 +7,17 @@ on:
     branches: [ $default-branch ]
 
 jobs:
-  call-workflow-passing-data:
-    uses: YouGitMoreWithLes-Insight/.github/workflow-templates/lint.yml
+  linter:
+    name: Linter workflow
+    uses: YouGitMoreWithLes-Insight/.github/.github/workflows/lint.yml@main
     with:
-      branch: $default_branch
+      branch: main
+    secrets: inherit
+    permissions:
+      contents: write
+
+  terraform:
+    uses: YouGitMoreWithLes-Insight/.github/workflow-templates/terrform-ci.yml
     secrets: inherit
 
   # lint-job:
