@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Terraform CD
 on:
   workflow_call:
     inputs:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    name: "Terraform build/integrate"
+    name: "Terraform build/deploy"
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -46,6 +46,10 @@ jobs:
       - name: Terrformm init
         run: terraform init -no-color
 
-      - name: Terrform validate
-        id: validate
-        run: terraform validate -no-color
+      - name: Terrform plan
+        id: plan
+        run: terraform plan -no-color
+
+      - name: Terrform apply
+        id: apply
+        run: terraform apply --auto-approve -no-color
