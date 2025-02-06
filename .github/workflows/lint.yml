@@ -6,8 +6,6 @@ on:
         required: true
         type: string
 
-permissions: read-all
-
 jobs:
   lint:
     name: Lint all repository code
